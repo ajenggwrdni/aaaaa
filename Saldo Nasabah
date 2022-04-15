@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double sld = input.nextInt();
+        double str = input.nextInt();
+        Mesin(sld, str);
+    }
+    public static void Mesin(double sld, double str){
+        double ba = 7000;
+        double jmlh = (sld + str);
+        jmlh -= ba;
+        double potong = jmlh * 0.0005;
+        System.out.print(jmlh + potong);
+    }
+}
