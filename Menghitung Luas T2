@@ -1,0 +1,57 @@
+import java.io.*;
+import java.util.*;
+
+ class Persegi{
+    
+    void Luaspersegi(int sisi){
+    System.out.println(sisi*sisi);
+    }
+    }
+
+    class Segitiga{
+    void Luassegitiga(int alas, int tinggi){
+    
+    System.out.println(alas*tinggi/2);
+    }
+    }
+    class Lingkaran{
+     
+    void Luaslingkaran(double r){
+        
+            if(r%7 ==0){
+                double jwb = 22/7 *(r*r);
+                System.out.println(jwb);
+            } else {
+                double jwb = 3.14*(r*r);
+                int result = (int)jwb;
+                System.out.println((double)result);
+  
+            }
+        }
+    }
+
+public class Solution {
+
+      public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+        int pilihan = input.nextInt();
+        if (pilihan == 1){
+            int sisi= input.nextInt();
+            Persegi Luaspersegi = new Persegi();
+            Luaspersegi.Luaspersegi(sisi);
+        }
+        else if (pilihan == 2){
+            int alas = input.nextInt();
+            int tinggi = input.nextInt();
+            Segitiga Luassegitiga = new Segitiga();
+            Luassegitiga.Luassegitiga(alas, tinggi);
+        }
+        else if (pilihan== 3){
+            int r = input.nextInt();
+            Lingkaran Luaslingkaran = new Lingkaran();
+            Luaslingkaran.Luaslingkaran(r);
+        }
+        else System.out.println("Input yang anda masukan tidak sesuai");
+    }
+}
+
