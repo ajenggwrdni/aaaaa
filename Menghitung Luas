@@ -1,0 +1,43 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+     Scanner input = new Scanner(System.in);
+   
+    int pilihan = input.nextInt();
+    
+        if (pilihan == 1) {
+        int sisi = input.nextInt();
+        System.out.println(Persegi(sisi));
+        }else if (pilihan == 2 ) {
+        int alas = input.nextInt();
+        int tinggi = input.nextInt();
+        System.out.println(Segitiga(alas, tinggi));
+        }else if (pilihan == 3){
+        double r = input.nextInt();
+            if (r % 7 == 0){
+            System.out.println(Lingkaran1(r));
+            }else  
+            System.out.println(Lingkaran2(r));
+        }else
+            System.out.println("Input yang anda masukan tidak sesuai");
+    }
+    public static int Persegi(int sisi){
+    int jwb = sisi * sisi;
+    return jwb;
+    }
+    public static int Segitiga(int alas, int tinggi){
+    int jwb = alas*tinggi/2;
+    return jwb;
+    }
+    public static double Lingkaran1(double r){
+    double jwb = 22/7 *(r*r);
+    return jwb;
+    }
+    public static double Lingkaran2(double r){
+    double jwb = 3.14*(r*r);
+    int result = (int)jwb;
+    return result;
+    }
+ }
