@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String kata = input.nextLine();
+        int nilaigeser = input.nextInt();
+        String kode = "";
+        Suratkaisar(nilaigeser, kode, kata);
+        }
+    
+        public static void Suratkaisar(int nilaigeser, String kode, String kata){
+        char kaisar;
+        for(int i=0; i < kata.length();i++) 
+            {
+            kaisar = kata.charAt(i);
+            if(kaisar >= 'a' && kaisar <= 'z') 
+            {
+             kaisar = (char) (kaisar + nilaigeser);
+             if(kaisar > 'z') {
+                kaisar = (char) (kaisar+'a'-'z'-1);
+             }
+             kode = kode + kaisar;
+            }
+            
+            else if(kaisar >= 'A' && kaisar <= 'Z') {
+             kaisar = (char) (kaisar + nilaigeser);    
+             if(kaisar > 'Z') {
+                 kaisar = (char) (kaisar+'A'-'Z'-1);
+             }
+             kode = kode + kaisar;
+            }
+            else {
+             kode = kode + kaisar;   
+            }
+        }
+        System.out.println(kode);  
+        }
+  }
